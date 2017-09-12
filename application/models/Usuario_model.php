@@ -1,7 +1,7 @@
 <?php
 
 
-class Blog_model extends CI_Model{
+class Usuario_model extends CI_Model{
 
    public $id;
    public $email;
