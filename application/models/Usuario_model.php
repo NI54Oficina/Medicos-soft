@@ -17,29 +17,25 @@ class Usuario_model extends CI_Model{
             return $query->result();
     }
 
-    public function getId()
-    {
-            // $this->title    = $_POST['title'];
-            // $this->content  = $_POST['content'];
-            // $this->date     = time();
-            //
-            // $this->db->update('usuario', $this, array('id' => $_POST['id']));
-    }
+    // public function getId()
+    // {
+          //Van en controller
+    // }
 
-    public function setPassword($hash)
-    {
+    // public function setPassword($hash)
+    // {
+        //Van en controller
+    // }
 
-    }
+    // public function getPassword()
+    // {
+      //Van en controller
+    // }
 
-    public function getPassword()
-    {
-
-    }
-
-    public function getUsername()
-    {
-
-    }
+    // public function getUsername()
+    // {
+      //Van en controller
+    // }
 
     public function save()
     {
@@ -54,9 +50,10 @@ class Usuario_model extends CI_Model{
 
     }
 
-    public function findOne()
+    public function findOne($pss)
     {
-
+      $query = $this->db->get_where('usuario',  array('password' => $pss));
+      return $query->result();
     }
 
 
