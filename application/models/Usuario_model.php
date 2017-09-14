@@ -37,22 +37,22 @@ class Usuario_model extends CI_Model{
       //Van en controller
     // }
 
-    public function save()
+    public function save($elem)
     {
-       $this->id    = $_POST['id'];
-       $this->email = $_POST['email'];
-       $this->enabled    = $_POST['enabled'];
-       $this->nombre    = $_POST['nombre'];
-       $this->password    = $_POST['password'];
-       $this->username   = $_POST['username'];
-       $this->usuario_google = $_POST['usuario_google'];
-       $this->db->insert('usuario', $this);
+      //  $this->id    = $_POST['id'];
+      //  $this->email = $_POST['email'];
+      //  $this->enabled    = $_POST['enabled'];
+      //  $this->nombre    = $_POST['nombre'];
+      //  $this->password    = $_POST['password'];
+      //  $this->username   = $_POST['username'];
+      //  $this->usuario_google = $_POST['usuario_google'];
+       $this->db->insert('usuario', $elem);
 
     }
 
-    public function findOne($pss)
+    public function findOne($id)
     {
-      $query = $this->db->get_where('usuario',  array('password' => $pss));
+      $query = $this->db->get_where('usuario',  array('id' => $id));
       return $query->result();
     }
 
