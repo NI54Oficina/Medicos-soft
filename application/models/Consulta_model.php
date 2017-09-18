@@ -34,6 +34,10 @@ class Consulta_model extends CI_Model{
     return $query->result();
   }
 
+  public function find_all($specifications){
+    //ver que hace.
+  }
+
 
 
 

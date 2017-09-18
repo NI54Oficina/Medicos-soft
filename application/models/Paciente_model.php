@@ -28,7 +28,7 @@ class Paciente extends CI_Model{
   }
 
   public function deletePaciente($paciente){
-    $query = $this->db->get_where('paciente',  array('id' => $paciente->$id));
+    $query = $this->db->delete('paciente',  array('id' => $paciente->$id));
     return $query->result();
   }
 
